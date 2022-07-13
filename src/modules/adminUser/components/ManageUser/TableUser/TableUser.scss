@@ -1,0 +1,67 @@
+#TableUser {
+  table {
+    background-color: #323259;
+    color: #fff;
+    margin-bottom: 0;
+    .cursor-pointer {
+      cursor: pointer;
+    }
+    thead th {
+      font-size: 14.5px;
+      font-weight: 600;
+      padding: 16px 18px;
+    }
+    tbody {
+      border-top: 1px solid #212529;
+      .link {
+        color: #007bff !important;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      tr td {
+        font-size: 13.3px;
+        padding: 10px 17px;
+        min-height: 80px;
+        white-space: nowrap;
+        .dash-right {
+          padding: 4px 10px 4px 0;
+          border-right: 1px dashed #bbb;
+        }
+        .dash-left {
+          padding-left: 15px;
+          border-left: 1px dashed #bbb;
+        }
+        .delete {
+          color: #fff;
+          background-color: #b18aff;
+          border-color: #b18aff;
+          font-size: 20px;
+          width: 34px;
+          height: 34px;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          &:hover {
+            color: #212529;
+          }
+        }
+      }
+    }
+    tr {
+      border-color: #212529;
+      vertical-align: middle;
+      &.item-remove {
+        td {
+          opacity: 0.6;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

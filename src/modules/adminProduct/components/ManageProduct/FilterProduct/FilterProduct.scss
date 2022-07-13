@@ -1,0 +1,136 @@
+#FilterProduct {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .search-title {
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 0 16px;
+  }
+  .search-conditions-box {
+    border: 1px solid #13132b;
+    background: #323259;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 20px 0;
+    margin-left: 0;
+    ul.search-conditions {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0 0 20px;
+      li {
+        .css-1in441m {
+          width: 0;
+        }
+        .MuiOutlinedInput-root {
+          background-color: #252547;
+          border-color: #13132b;
+          color: #fff;
+          .MuiSelect-select {
+            white-space: pre-wrap;
+          }
+          svg {
+            color: #fff;
+          }
+        }
+        color: #fff;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        &.substring-condition {
+          width: 50%;
+        }
+        &.categoryId-condition {
+          width: 25%;
+        }
+        &.substring-condition {
+          input {
+            background-color: #252547;
+            border-color: #13132b;
+            color: #fff;
+            &:hover {
+              background-color: #1b1b38;
+              border-color: #13132b;
+            }
+          }
+        }
+
+        &.actions {
+          button {
+            color: #fff;
+            background-color: #b18aff;
+            border-color: #b18aff;
+            font-size: 15px;
+            &:hover {
+              color: #212529;
+            }
+          }
+        }
+      }
+    }
+    .arrow {
+      border: 1px solid #13132b;
+      border-top: none;
+      background: #323259
+        url(https://admin.gearfocus.div4.pgtest.co/arrow_search.e9a03c6807837ca994f8.png)
+        center 2px no-repeat;
+      border-radius: 0 0 5px 5px;
+      bottom: -21px;
+      height: 21px;
+      left: 50%;
+      margin-left: -29px;
+      position: absolute;
+      width: 58px;
+      cursor: pointer;
+      &[aria-expanded="true"] {
+        background-position: center -16px;
+      }
+    }
+    .search-conditions-hidden {
+      border-top: 1px solid #13132b;
+      > li {
+        margin-right: 40px;
+      }
+      li {
+        &.inventory-condition {
+          .MuiOutlinedInput-root {
+            width: 350px !important;
+          }
+        }
+        label {
+          margin-right: 15px;
+          margin-bottom: 8px;
+          padding-left: 5px;
+        }
+      }
+      .MuiOutlinedInput-root {
+        background-color: #252547;
+        border-color: #13132b;
+        color: #fff;
+        width: 230px;
+        svg {
+          color: #fff;
+        }
+      }
+      input {
+        background-color: #252547;
+        border-color: #13132b;
+        color: #fff;
+        &:hover {
+          background-color: #1b1b38;
+          border-color: #13132b;
+        }
+        &[type="radio"] {
+          background-color: #fff;
+          border-color: #fff;
+          &:checked {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+          }
+        }
+      }
+    }
+  }
+}

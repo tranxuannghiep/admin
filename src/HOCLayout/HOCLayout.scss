@@ -1,0 +1,17 @@
+#HOCLayout {
+  .main {
+    padding-top: 76px;
+    height: 100vh;
+    .main-content {
+      background-color: #1b1b38;
+      height: calc(100vh - 76px);
+      color: #fff;
+      display: flex;
+      .main-body {
+        flex: 1;
+        padding: 36px 36px 12px;
+        overflow-x: auto;
+      }
+    }
+  }
+}

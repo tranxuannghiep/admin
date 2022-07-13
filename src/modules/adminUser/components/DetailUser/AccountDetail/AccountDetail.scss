@@ -1,0 +1,15 @@
+#AccountDetail {
+  padding: 32px 0;
+  .row {
+    .text-right {
+      text-align: right;
+    }
+    .link {
+      color: #007bff !important;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

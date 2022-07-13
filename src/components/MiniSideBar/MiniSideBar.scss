@@ -1,0 +1,38 @@
+#MiniSideBar {
+  width: 60px;
+  background-color: #323259;
+  > ul {
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 12px 0;
+      cursor: pointer;
+      font-size: 28px;
+      &.active {
+        color: #b18aff;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          height: 100%;
+          width: 4px;
+          background: #a16eff;
+        }
+      }
+      &:hover {
+        color: #b18aff;
+      }
+      border-bottom: 1px solid #1b1b38;
+      span {
+        font-size: 13px;
+        margin-left: 6px;
+      }
+    }
+    > li {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

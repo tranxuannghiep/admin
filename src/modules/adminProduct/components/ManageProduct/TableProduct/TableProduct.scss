@@ -1,0 +1,178 @@
+#TableProduct {
+  table {
+    background-color: #323259;
+    color: #fff;
+    margin-bottom: 0;
+    .cursor-pointer {
+      cursor: pointer;
+    }
+    thead th {
+      font-size: 14.5px;
+      font-weight: 600;
+      padding: 16px 18px;
+    }
+    tbody {
+      border-top: 1px solid #212529;
+      .link {
+        color: #007bff !important;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      tr td {
+        &.mw-300 {
+          max-width: 300px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &.mw-200 {
+          max-width: 200px !important;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &.mw-120 {
+          max-width: 120px !important;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .bg-dollar {
+          background-color: #e6eaee;
+          border-radius: 4px;
+          width: 120px;
+        }
+        .icon-dollar {
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #444;
+        }
+        font-size: 13.3px;
+        padding: 10px 17px;
+        // min-height: 80px;
+        white-space: nowrap;
+        &:first-child,
+        &:last-child {
+          width: 60px;
+        }
+
+        .dash-right {
+          padding: 4px 10px 4px 0;
+          //   width: 60px;
+          .input-checkbox {
+            padding-right: 10px;
+            border-right: 1px solid #fff;
+          }
+          .icon-power {
+            border-right: 1px dashed #bbb;
+            padding: 3px 10px;
+            cursor: pointer;
+            svg.active {
+              color: #72b25b;
+            }
+          }
+        }
+        .dash-left {
+          padding-left: 15px;
+          border-left: 1px dashed #bbb;
+        }
+        .delete {
+          color: #fff;
+          background-color: #b18aff;
+          border-color: #b18aff;
+          font-size: 20px;
+          width: 34px;
+          height: 34px;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          &:hover {
+            color: #212529;
+          }
+        }
+      }
+    }
+    tr {
+      .view.edittable {
+        padding: 6px 10px 6px 9px;
+        border-radius: 4px;
+        min-height: 32px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+      }
+      &:hover {
+        .view.edittable {
+          cursor: pointer;
+          background-color: #b18aff;
+          border: 1px solid #b18aff;
+        }
+      }
+      border-color: #212529;
+      vertical-align: middle;
+      &.item-remove {
+        td {
+          opacity: 0.6;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .dialogRemove {
+    background: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .card {
+      background-color: #323259;
+      width: 400px;
+      .list-group-item {
+        padding: 16px 24px;
+        background-color: #323259;
+        border-bottom: 1px solid #1b1b38;
+        color: #fff;
+        .title {
+          font-size: 15px;
+          font-weight: 600;
+        }
+        .body {
+          font-size: 15px;
+        }
+        .btn {
+          padding: 6px 16px;
+          font-weight: bold;
+          &:first-child {
+            background-color: #b18aff;
+            border-color: #b18aff;
+            &:hover {
+              background-color: #d5bfff;
+              border-color: #d5bfff;
+              color: #fff;
+            }
+          }
+          &:last-child {
+            background-color: #ff708d;
+            border-color: #ff708d;
+            &:hover {
+              background-color: #ffa8b4;
+              border-color: #ffa8b4;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

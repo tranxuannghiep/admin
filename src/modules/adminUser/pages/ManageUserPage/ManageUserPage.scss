@@ -1,0 +1,11 @@
+#ManageUserPage {
+  .btn-add-user {
+    color: #fff;
+    background-color: #b18aff;
+    border-color: #b18aff;
+    font-size: 15px;
+    &:hover {
+      color: #212529;
+    }
+  }
+}

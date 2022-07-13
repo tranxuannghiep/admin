@@ -1,0 +1,86 @@
+import { Categories, DetailProduct, Images } from "models/products";
+
+export const initialValuesAddProduct = {
+  id: "",
+  vendor_id: "",
+  name: "",
+  brand_id: "",
+  condition_id: "",
+  sku: Date.now().toString(),
+  imagesUpload: [] as (File | Images)[],
+  imagesOrder: [] as string[],
+  deleted_images: [] as number[],
+  categories: [] as Categories[],
+  description: "",
+  enabled: "1",
+  memberships: [] as string[],
+  tax_exempt: "0",
+  price: "",
+  participate_sale: "0",
+  sale_price_type: "$",
+  sale_price: "0",
+  arrival_date: new Date(Date.now()).toLocaleString("en-CA", {
+    year: "numeric",
+    day: "2-digit",
+    month: "2-digit",
+  }),
+  quantity: "",
+  shipping_to_zones: [{ id: "1", price: "" }],
+  og_tags_type: "0",
+  og_tags: "",
+  meta_desc_type: "A",
+  meta_description: "",
+  meta_keywords: "",
+  product_page_title: "",
+  facebook_marketing_enabled: "0",
+  google_feed_enabled: "0",
+};
+
+export const initialValuesDetailProduct = (value: DetailProduct) => {
+  return {
+    id: value.id || "",
+    vendor_id: value.vendor_id || "",
+    name: value.name || "",
+    brand_id: value.brand_id || "",
+    condition_id: value.condition_id || "",
+    sku: value.sku || "",
+    imagesUpload: value.images.map((val: any) => ({
+      id: val.id,
+      file: val.thumbs[0],
+    })) as (File | Images)[],
+    imagesOrder: value.images.map((val) => val.file) as string[],
+    deleted_images: [] as number[],
+    categories: value.categories.map((val) => ({
+      id: val.category_id,
+      name: val.name,
+    })) as Categories[],
+    description: value.description || "",
+    enabled: value.enabled || "1",
+    memberships: value.memberships.map((val) => val.membership_id),
+    tax_exempt: value.tax_exempt || "0",
+    price: value.price || "",
+    participate_sale: value.participate_sale || "0",
+    sale_price_type: value.sale_price_type || "$",
+    sale_price: value.sale_price || "",
+    arrival_date:
+      (Number(value.arrival_date) * 1000).toString() ||
+      new Date(Date.now()).toLocaleString("en-CA", {
+        year: "numeric",
+        day: "2-digit",
+        month: "2-digit",
+      }),
+    quantity: value.quantity || "",
+    shipping_to_zones: value.shipping.map((val) => ({
+      id: val.id,
+      price: val.price,
+    })),
+    og_tags_type: value.og_tags_type || "",
+    og_tags: value.og_tags || "",
+    meta_desc_type: value.meta_desc_type || "",
+    meta_description: value.meta_description || "",
+    meta_keywords: value.meta_keywords || "",
+    product_page_title: value.product_page_title || "",
+    facebook_marketing_enabled: value.facebook_marketing_enabled || "",
+    google_feed_enabled: value.google_feed_enabled || "",
+  };
+};

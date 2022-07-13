@@ -1,0 +1,64 @@
+#DetailUserForm {
+  form {
+    .label-title {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 16px 0;
+    }
+    .row {
+      label {
+        text-align: right;
+      }
+      input,
+      textarea {
+        background-color: #252547;
+        border-color: #13132b;
+        color: #fff;
+        &:hover {
+          background-color: #1b1b38;
+          border-color: #13132b;
+        }
+      }
+      .MuiOutlinedInput-root {
+        background-color: #252547;
+        border-color: #13132b;
+        color: #fff;
+        .MuiSelect-select {
+          white-space: pre-wrap;
+        }
+        svg {
+          color: #fff;
+        }
+        &:hover {
+          background-color: #1b1b38;
+          border-color: #13132b;
+        }
+      }
+      small {
+        color: red;
+        font-size: 90%;
+      }
+    }
+    .update-user {
+      position: sticky;
+      bottom: 0;
+      background: #323259;
+      padding: 15px 2.25rem;
+      margin-top: 40px;
+      border: 1px solid #1b1b38;
+      border-width: 0 0 1px 1px;
+      box-shadow: 0 0 13px 0 #b18aff;
+      z-index: 2;
+      .btn {
+        background-color: #f0ad4e;
+        border-color: #eea236;
+        color: #fff;
+        width: 150px;
+        &:hover {
+          color: #1b1b38;
+        }
+      }
+    }
+  }
+}

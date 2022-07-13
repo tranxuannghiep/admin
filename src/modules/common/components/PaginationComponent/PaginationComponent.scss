@@ -1,0 +1,46 @@
+#PaginationComponent {
+  background-color: #323259;
+  padding: 20px;
+  .pagination {
+    li {
+      border: 1px solid #13132b !important;
+      &:not(:first-child) {
+        border-left-color: transparent !important;
+      }
+      &:hover {
+        background: #b18aff !important;
+      }
+    }
+
+    .page-item,
+    .page-link {
+      color: #fff;
+      font-size: 13px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent !important;
+      border: none;
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    .selected {
+      background-color: #b18aff !important;
+    }
+  }
+  .page-limit {
+    strong {
+      font-weight: 500;
+      font-size: 15px;
+    }
+    select {
+      background-color: #b18aff;
+      color: #fff;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}
