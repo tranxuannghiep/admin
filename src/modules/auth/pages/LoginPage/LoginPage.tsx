@@ -35,7 +35,7 @@ export default function Login(props: LoginProps) {
         localStorage.setItem(AUTH, json.user_cookie);
         setTimeout(()=>{
           navigate(ROUTES.manageUser);
-        },200)
+        },1000)
         // return;
       } else {
         localStorage.removeItem("user");
