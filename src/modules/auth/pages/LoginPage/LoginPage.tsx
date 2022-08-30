@@ -33,7 +33,9 @@ export default function Login(props: LoginProps) {
       if (json?.success === true) {
         localStorage.setItem("user", JSON.stringify(json.user));
         localStorage.setItem(AUTH, json.user_cookie);
-        navigate(ROUTES.manageUser);
+        setTimeout(()=>{
+          navigate(ROUTES.manageUser);
+        },200)
         return;
       } else {
         localStorage.removeItem("user");

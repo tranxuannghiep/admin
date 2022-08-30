@@ -67,8 +67,8 @@ const getData = async () => {
     store.dispatch(getShippingList(shippingList.data));
   }
 };
-const Auth = localStorage.getItem(AUTH);
-if (Boolean(Auth)) getData();
+// const Auth = localStorage.getItem(AUTH);
+if (Boolean(localStorage.getItem(AUTH))) getData();
 export default function HOCLayout({ children }: HOCLayoutProps) {
   const [isMenuMini, setIsMenuMini] = useState(false);
   return (
